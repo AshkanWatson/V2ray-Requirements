@@ -34,3 +34,6 @@ apt-get dist-upgrade -y
 
 # Upgrade to the latest version of the distribution
 apt-get full-upgrade -y
+
+# Removing Old packages
+apt-get autoremove -y
