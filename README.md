@@ -3,4 +3,6 @@
 
 ## Installation
 
-```sudo wget https://raw.githubusercontent.com/AshkanWatson/V2ray-Requirements/main/Main.sh -O Main.sh && chmod +x Main.sh && bash Main.sh```
+```sh
+sudo wget https://raw.githubusercontent.com/AshkanWatson/V2ray-Requirements/main/Main.sh -O Main.sh && chmod +x Main.sh && bash Main.sh
+```
