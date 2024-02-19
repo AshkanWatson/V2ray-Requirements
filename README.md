@@ -12,8 +12,19 @@ This Script Is For Making V2ray Befor Do Anything In Linux Server (Debian) You C
 
 ## Install
 
+### Debian/Ubuntu
+
 >**Tested on Ubuntu 22/20**
 
 ```sh
-wget https://raw.githubusercontent.com/AshkanWatson/V2ray-Requirements/main/Main.sh -O Main.sh && chmod +x Main.sh && bash Main.sh
+wget https://raw.githubusercontent.com/AshkanWatson/V2ray-Requirements/main/InstallApt.sh -O InstallApt.sh && chmod +x InstallApt.sh && bash InstallApt.sh
 ```
+
+### Centos/Rocky
+
+>**Tested on Rocky 9.3**
+
+```sh
+wget https://raw.githubusercontent.com/AshkanWatson/V2ray-Requirements/main/InstallYum.sh -O InstallYum.sh && chmod +x InstallYum.sh && bash InstallYum.sh
+```
+
