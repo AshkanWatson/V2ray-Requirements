@@ -37,3 +37,29 @@ sudo apt-get full-upgrade -y
 
 # Removing Old packages
 sudo apt-get autoremove -y
+
+# Install Certbot For SSL
+sudo apt install certbot python3-certbot-nginx -y
+
+sudo systemctl stop nginx
+
+read -p "Enter Your Domain Name (e.g., my-domain.com): " DOMAIN
+
+# Check if Certbot is installed and install if necessary
+if ! command -v certbot &> /dev/null
+then
+    sudo apt-get install certbot -y
+fi
+
+# Generate Let's Encrypt SSL certificate using Certbot
+sudo certbot certonly --standalone --preferred-challenges http -d $DOMAIN
+
+# Copy certificate files to /root
+sudo cp /etc/letsencrypt/live/$DOMAIN/fullchain.pem /root
+sudo cp /etc/letsencrypt/live/$DOMAIN/privkey.pem /root
+
+# Change permissions of copied files
+chmod 600 /root/fullchain.pem
+chmod 600 /root/privkey.pem
+
+sudo systemctl start nginx
