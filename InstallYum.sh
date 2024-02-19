@@ -37,6 +37,7 @@ sudo yum update -y
 
 # Install Certbot For SSL
 sudo yum install certbot python3-certbot-nginx -y
+sudo yum install nginx -y
 
 sudo systemctl stop nginx
 
