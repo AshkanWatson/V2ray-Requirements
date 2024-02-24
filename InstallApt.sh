@@ -16,7 +16,12 @@ sudo ufw allow 2060/udp
 sudo ufw allow 80
 sudo ufw allow 80/tcp
 sudo ufw allow 80/udp
-
+# Block a Iranian Site IP address
+sudo ufw deny from 185.188.106.10 #www.Digikala.com
+sudo ufw deny from 86.104.35.19 #www.Snapp.ir
+sudo ufw deny from 185.143.234.225 #www.snappfood.ir
+sudo ufw deny from 185.143.233.81 #www.tapsi.ir
+sudo ufw deny from 185.143.233.81 #www.app.tapsi.ir
 # Allow Outgoing traffic for all
 sudo ufw default allow outgoing
 
