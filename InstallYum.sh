@@ -20,6 +20,17 @@ sudo firewall-cmd --permanent --add-port=2060/udp
 sudo firewall-cmd --permanent --add-port=80/tcp
 sudo firewall-cmd --permanent --add-port=80/udp
 
+sudo iptables -A INPUT -s 185.188.106.10 -j DROP #www.Digikala.com
+sudo iptables -A OUTPUT -d 185.188.106.10 -j DROP #www.Digikala.com
+sudo iptables -A INPUT -d 86.104.35.19 -j DROP #www.Snapp.ir
+sudo iptables -A OUTPUT -d 86.104.35.19 -j DROP #www.Snapp.ir
+sudo iptables -A INPUT -d 185.143.234.225 -j DROP #www.snappfood.ir
+sudo iptables -A OUTPUT -d 185.143.234.225 -j DROP #www.snappfood.ir
+sudo iptables -A INPUT -d 185.143.233.81 -j DROP #www.tapsi.ir
+sudo iptables -A OUTPUT -d 185.143.233.81 -j DROP #www.tapsi.ir
+sudo iptables -A INPUT -d 185.143.233.81 -j DROP #www.app.tapsi.ir
+sudo iptables -A OUTPUT -d 185.143.233.81 -j DROP #www.app.tapsi.ir
+
 # Reload the firewall to apply changes
 sudo firewall-cmd --reload
 
