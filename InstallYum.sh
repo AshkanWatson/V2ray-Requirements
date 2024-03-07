@@ -29,7 +29,7 @@ sudo iptables -A OUTPUT -d 185.143.234.225 -j DROP #www.snappfood.ir
 sudo iptables -A INPUT -d 185.143.233.81 -j DROP #www.tapsi.ir
 sudo iptables -A OUTPUT -d 185.143.233.81 -j DROP #www.tapsi.ir
 sudo iptables -A INPUT -d 185.143.233.81 -j DROP #www.app.tapsi.ir
-sudo iptables -A OUTPUT -d 185.143.233.81 -j DROP #www.app.tapsi.ir
+sudo iptables -A OUTPUT -d 185.143.233.81 -j DROP #www.app.tapsi.ir 
 
 # Reload the firewall to apply changes
 sudo firewall-cmd --reload
